@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to bottom right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('image1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    height: 220px;
+    max-width: 560px;
+    width: 100%;
+    /* Removed background and box-shadow */
+    position: relative; /* Added position relative */
+}
+
+section .container .time {
+    display: flex;
+    align-items: center;
+}
+
+.container .time .time-colon {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.time .time-colon .am_pm {
+    position: absolute;
+    top: 0;
+    right: -50px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: red; /* Changed text color to red */
+}
+
+.time .time-colon .time-text {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    border-radius: 6px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background: none; /* Removed background */
+    box-shadow: none; /* Removed box-shadow */
+    z-index: 0; /* Lower z-index to keep it below the AM/PM indicator */
+    padding: 20px; /* Added padding to the timing box */
+    color: red; /* Changed text color to red */
+}
+
+.time .time-colon .time-text,
+.time .time-colon .colon {
+    font-size: 35px;
+    font-weight: 00;
+}
+
+.time .time-colon .colon {
+    font-size: 40px;
+    margin: 0 10px;
+}
+
+.colon{
+    color: red;
+}
+
+.time .time-colon .time-text .text {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: red; /* Changed text color to red */
+}
